@@ -1,0 +1,18 @@
+{
+  "name": "tabela",
+  "version": "1.0.0",
+  "description": "Sistema de frequencia docente com banco de dados local",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "better-sqlite3": "^12.9.0",
+    "express": "^5.2.1"
+  }
+}
