@@ -701,6 +701,14 @@
           margin: 4mm;
         }
 
+        html,
+        body {
+          width: auto;
+          min-height: auto;
+          margin: 0;
+          padding: 0;
+        }
+
         body {
           background: #fff;
         }
@@ -709,20 +717,45 @@
           display: none !important;
         }
 
-        body * {
-          visibility: hidden;
+        .hero,
+        #loginDiv,
+        .app-grid > section:not(.doc-card),
+        .doc-card .section-header,
+        .doc-card .doc-toolbar,
+        .doc-card .divider,
+        .doc-card .form-grid,
+        .doc-card .signature-note {
+          display: none !important;
         }
 
-        #doc,
-        #doc * {
-          visibility: visible;
+        .page-shell,
+        #app,
+        .doc-card,
+        .doc-card .stack,
+        .preview-shell,
+        #doc {
+          display: block !important;
+        }
+
+        .page-shell,
+        #app,
+        .doc-card,
+        .doc-card .stack,
+        .preview-shell {
+          width: auto !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          border: 0 !important;
+          border-radius: 0 !important;
+          box-shadow: none !important;
+          background: transparent !important;
+          overflow: visible !important;
         }
 
         #doc {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
+          position: static;
+          width: 202mm;
+          min-height: auto;
           margin: 0;
           padding: 0;
           border: 0;
@@ -737,15 +770,26 @@
         }
 
         .doc-layout {
-          transform: scale(0.96);
-          transform-origin: top left;
-          width: 104.2%;
+          transform: none;
+          width: 100%;
+          page-break-inside: avoid;
+          break-inside: avoid;
         }
 
         .doc-layout th,
         .doc-layout td {
           padding: 1px;
           font-size: 5.5px;
+        }
+
+        .doc-layout table,
+        .doc-layout tr,
+        .doc-layout td,
+        .doc-layout th,
+        .doc-layout .section,
+        .doc-layout .doc-page {
+          page-break-inside: avoid;
+          break-inside: avoid;
         }
 
         .doc-layout .doc-title {
